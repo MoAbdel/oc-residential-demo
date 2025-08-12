@@ -6,6 +6,15 @@ export const revalidate = 0;
 
 export async function POST(request: Request) {
   try {
+    // Check if Supabase is available (demo mode)
+    if (!supabase) {
+      return NextResponse.json({
+        success: true,
+        message: 'Demo mode: Quote request received (not stored)',
+        demo: true
+      });
+    }
+
     const body = await request.json();
     
     // Validate required fields
@@ -70,6 +79,15 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
+    // Check if Supabase is available (demo mode)
+    if (!supabase) {
+      return NextResponse.json({
+        success: true,
+        data: [],
+        message: 'Demo mode: No stored quotes available'
+      });
+    }
+
     // Fetch quotes from Supabase (for admin use)
     const { data, error } = await supabase
       .from('rate_quotes')

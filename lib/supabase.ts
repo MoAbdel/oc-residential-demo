@@ -2,16 +2,13 @@ import { createClient } from '@supabase/supabase-js';
 
 // You need to add these to your .env.local file
 // Get them from: https://app.supabase.com/project/YOUR_PROJECT/settings/api
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_AK!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_AK;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  const error = `Missing Supabase environment variables. URL: ${!!supabaseUrl}, Key: ${!!supabaseAnonKey}`;
-  console.error(error);
-  throw new Error(error);
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// For demo purposes, create a mock client if env vars are missing
+export const supabase = (supabaseUrl && supabaseAnonKey) 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
 
 // Database types
 export interface NewsletterSubscription {

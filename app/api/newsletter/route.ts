@@ -6,6 +6,15 @@ export const revalidate = 0;
 
 export async function POST(request: Request) {
   try {
+    // Check if Supabase is available (demo mode)
+    if (!supabase) {
+      return NextResponse.json({
+        success: true,
+        message: 'Demo mode: Newsletter subscription received (not stored)',
+        demo: true
+      });
+    }
+
     // Debug environment variables
     console.log('Environment check:', {
       hasUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -105,6 +114,15 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
+    // Check if Supabase is available (demo mode)
+    if (!supabase) {
+      return NextResponse.json({
+        success: true,
+        data: [],
+        message: 'Demo mode: No stored subscriptions available'
+      });
+    }
+
     // Fetch newsletter subscriptions from Supabase (for admin use)
     const { data, error } = await supabase
       .from('newsletter_subscriptions')
