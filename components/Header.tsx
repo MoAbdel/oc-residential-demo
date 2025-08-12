@@ -133,16 +133,18 @@ export default function Header() {
                     {/* Dropdown Menu */}
                     {((item.page === 'Services' && programsDropdownOpen) ||
                       (item.page === 'Areas' && areasDropdownOpen)) && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
-                        {item.dropdownItems?.map((dropdownItem, index) => (
-                          <Link
-                            key={index}
-                            href={dropdownItem.url}
-                            className="block px-4 py-2 text-sm text-slate-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-150"
-                          >
-                            {dropdownItem.title}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                        <div className="bg-white rounded-lg shadow-lg border border-slate-200 py-2">
+                          {item.dropdownItems?.map((dropdownItem, index) => (
+                            <Link
+                              key={index}
+                              href={dropdownItem.url}
+                              className="block px-4 py-2 text-sm text-slate-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-150"
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
