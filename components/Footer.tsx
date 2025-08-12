@@ -13,14 +13,14 @@ const navigationItems = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-white text-gray-900 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="text-3xl font-bold text-white">
+              <div className="text-3xl font-bold text-orange-500">
                 Sarah Chen
-                <div className="text-lg font-normal text-slate-300">
+                <div className="text-lg font-normal text-orange-400">
                   Orange County Real Estate
                 </div>
               </div>
@@ -33,7 +33,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-slate-400 mb-4">
+            <p className="text-gray-600 mb-4">
               Your trusted Orange County real estate agent specializing in residential properties. 
               I'm committed to helping you find your dream home or sell your property for the best price. DRE #02145678.
             </p>
@@ -41,10 +41,10 @@ export default function Footer() {
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-slate-400">
+            <ul className="space-y-2 text-gray-600">
               {navigationItems.map((item) => (
                 <li key={item.title}>
-                  <Link href={item.url} className="hover:text-white transition-colors duration-200">
+                  <Link href={item.url} className="hover:text-orange-500 transition-colors duration-200">
                     {item.title}
                   </Link>
                 </li>
@@ -54,7 +54,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-2 text-slate-400">
+            <ul className="space-y-2 text-gray-600">
               <li>📞 (949) 555-0123</li>
               <li>📧 sarah@coastalrealtyoc.com</li>
               <li>📍 Orange County, CA</li>
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} Sarah Chen Real Estate. All rights reserved.</p>
           <p>DRE# 02145678 | Coastal Realty Group</p>
         </div>

@@ -168,7 +168,7 @@ export default function Header() {
               (949) 555-0123
             </a>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center whitespace-nowrap">
                 Contact Me
               </Button>
             </Link>
