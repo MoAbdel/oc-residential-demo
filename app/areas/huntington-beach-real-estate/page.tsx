@@ -3,96 +3,108 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, Waves, Sun, TrendingUp, Users, Building } from 'lucide-react';
+import { MapPin, Home, Waves, Sun, TrendingUp, Users, Building, Award, Phone, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Huntington Beach Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Huntington Beach wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra area. Call (949) 579-2057.',
-  keywords: 'Huntington Beach wholesale mortgage broker, Huntington Beach home loans, Huntington Beach HELOC, Surf City mortgage, Main Street loans, Bella Terra wholesale mortgage broker'
+  title: 'Huntington Beach Real Estate Agent | Homes for Sale & Coastal Properties | Sarah Chen',
+  description: 'Expert Huntington Beach real estate agent specializing in beachfront homes, Surf City lifestyle properties, and coastal investments. Professional beach home buying & selling. Call (949) 555-0123.',
+  keywords: 'Huntington Beach real estate agent, beach homes for sale, Surf City properties, coastal real estate, beachfront homes, Huntington Beach homes'
 };
 
-export default function HuntingtonBeachMortgageBrokerPage() {
+export default function HuntingtonBeachRealEstatePage() {
   const huntingtonBeachNeighborhoods = [
     {
       name: 'Main Street/Downtown',
       avgPrice: '$1.3M',
-      description: 'Historic downtown with pier proximity and beachside lifestyle'
+      description: 'Historic downtown with pier proximity and vibrant beachside lifestyle',
+      yearBuilt: '1960s-1980s',
+      homeStyles: 'Beach cottages, Condos'
     },
     {
       name: 'Surf City', 
       avgPrice: '$1.2M',
-      description: 'Classic beach community with vintage charm and surf culture'
+      description: 'Classic beach community with vintage charm and authentic surf culture',
+      yearBuilt: '1950s-1970s',
+      homeStyles: 'Original beach homes, Bungalows'
     },
     {
       name: 'Bella Terra',
       avgPrice: '$1.0M',
-      description: 'Newer development with shopping, dining, and family amenities'
+      description: 'Modern development with shopping, dining, and contemporary amenities',
+      yearBuilt: '2000s-2010s',
+      homeStyles: 'Modern homes, Townhomes'
     },
     {
       name: 'Oak View',
       avgPrice: '$900K',
-      description: 'Inland neighborhood with larger lots and family-friendly atmosphere'
+      description: 'Inland neighborhood with larger lots and family-friendly atmosphere',
+      yearBuilt: '1970s-1990s',
+      homeStyles: 'Single-family, Ranch style'
     },
     {
       name: 'Seacliff',
       avgPrice: '$1.5M',
-      description: 'Upscale oceanfront community with luxury beach properties'
+      description: 'Upscale oceanfront community with luxury beach properties and ocean views',
+      yearBuilt: '1980s-2000s',
+      homeStyles: 'Oceanfront condos, Beach houses'
     },
     {
       name: 'Brightwater',
       avgPrice: '$2.5M',
-      description: 'Luxury gated community with waterfront homes and resort amenities'
+      description: 'Luxury gated community with waterfront homes and resort-style amenities',
+      yearBuilt: '2000s-Present',
+      homeStyles: 'Luxury estates, Waterfront homes'
     }
   ];
 
-  const loanPrograms = [
+  const realEstateServices = [
     {
-      title: 'HELOC for Beach Properties',
-      description: 'Access your coastal home equity for improvements, investment, or lifestyle',
-      benefits: ['Up to $500K credit lines', 'Prime + 0% intro rates', 'No closing costs available'],
-      icon: <TrendingUp className="w-8 h-8 text-blue-600" />
+      title: 'Beachfront Properties',
+      description: 'Specialized expertise in oceanfront homes and coastal property investments',
+      benefits: ['Ocean view property marketing', 'Coastal market analysis', 'Flood zone expertise'],
+      icon: <Waves className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'Jumbo Loans',
-      description: 'Financing for Huntington Beach luxury and oceanfront properties',
-      benefits: ['Competitive jumbo rates', 'Up to $3M+ loan amounts', 'Flexible down payments'],
-      icon: <Building className="w-8 h-8 text-green-600" />
+      title: 'Surf City Lifestyle',
+      description: 'Understanding the unique beach culture and lifestyle property needs',
+      benefits: ['Beach community knowledge', 'Surf proximity properties', 'Vacation rental potential'],
+      icon: <Sun className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'VA Loans',
-      description: 'No down payment loans for veterans and active military',
-      benefits: ['0% down payment', 'No PMI required', 'Competitive interest rates'],
-      icon: <Home className="w-8 h-8 text-purple-600" />
+      title: 'Investment Properties',
+      description: 'Beach rental properties and coastal investment opportunities',
+      benefits: ['Rental income analysis', 'Vacation rental licensing', 'ROI projections'],
+      icon: <Building className="w-8 h-8 text-orange-500" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <MapPin className="w-4 h-4 mr-2" />
             Serving All Huntington Beach Areas
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Huntington Beach</span> Wholesale Mortgage Broker
+          <h1 className="text-4xl md:text-5xl font-extralight text-gray-900 mb-6">
+            Huntington Beach <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Real Estate</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Huntington Beach homebuyers and homeowners. Specializing in 
-            HELOC, jumbo loans, and refinancing for Main Street, Surf City, Bella Terra, 
-            and all Huntington Beach communities.
+          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto mb-8">
+            Your trusted Huntington Beach real estate agent specializing in beachfront properties, 
+            Surf City lifestyle homes, and coastal investments from Main Street to Brightwater.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Get HB Mortgage Rates
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-8 py-3 text-lg font-light shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Search Beach Properties
               </Button>
             </Link>
-            <a href="tel:(949) 579-2057">
-              <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Call (949) 579-2057
+            <a href="tel:(949) 555-0123">
+              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-3 text-lg font-light">
+                <Phone className="w-4 h-4 mr-2" />
+                Call (949) 555-0123
               </Button>
             </a>
           </div>
@@ -100,62 +112,62 @@ export default function HuntingtonBeachMortgageBrokerPage() {
 
         {/* Huntington Beach Market Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Home className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">$1.1M</h3>
-            <p className="text-slate-600">Median Home Price</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Waves className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">10</h3>
-            <p className="text-slate-600">Miles of Beach</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Sun className="w-8 h-8 text-orange-600" />
+              <Home className="w-8 h-8 text-orange-500" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">280+</h3>
-            <p className="text-slate-600">Sunny Days/Year</p>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">$1.2M</h3>
+            <p className="text-gray-600 font-light">Median Home Price</p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-purple-600" />
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Waves className="w-8 h-8 text-blue-600" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">198K+</h3>
-            <p className="text-slate-600">Population</p>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">10</h3>
+            <p className="text-gray-600 font-light">Miles of Beach</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
+            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sun className="w-8 h-8 text-yellow-600" />
+            </div>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">280+</h3>
+            <p className="text-gray-600 font-light">Sunny Days/Year</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-8 h-8 text-green-600" />
+            </div>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">198K+</h3>
+            <p className="text-gray-600 font-light">Population</p>
           </div>
         </div>
 
-        {/* Specialized Loan Programs */}
+        {/* Real Estate Services */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Mortgage Solutions for Huntington Beach Homeowners
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Beach Real Estate <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Specialties</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {loanPrograms.map((program, index) => (
-              <Card key={index} className="border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
+            {realEstateServices.map((service, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-6">
                   <div className="flex items-center space-x-4 mb-4">
-                    {program.icon}
-                    <CardTitle className="text-xl">{program.title}</CardTitle>
+                    {service.icon}
+                    <CardTitle className="text-xl font-light text-gray-900">{service.title}</CardTitle>
                   </div>
-                  <p className="text-slate-600">{program.description}</p>
+                  <p className="text-gray-600 font-light">{service.description}</p>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 mb-6">
-                    {program.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-center text-sm text-slate-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                <CardContent className="pt-6">
+                  <div className="space-y-3 mb-6">
+                    {service.benefits.map((benefit, i) => (
+                      <div key={i} className="flex items-center text-sm text-gray-700 font-light">
+                        <CheckCircle className="w-4 h-4 text-orange-500 mr-3 flex-shrink-0" />
                         {benefit}
                       </div>
                     ))}
                   </div>
-                  <Link href="/loan-programs">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Link href="/services">
+                    <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-light">
                       Learn More
                     </Button>
                   </Link>
@@ -167,105 +179,127 @@ export default function HuntingtonBeachMortgageBrokerPage() {
 
         {/* Huntington Beach Neighborhoods */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Huntington Beach Neighborhoods We Serve
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Beach Communities <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">We Serve</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {huntingtonBeachNeighborhoods.map((neighborhood, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-6">
+                  <CardTitle className="flex items-center text-xl font-light text-gray-900">
+                    <MapPin className="w-5 h-5 text-orange-500 mr-2" />
                     {neighborhood.name}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-slate-600">Avg Home Price:</span>
-                    <span className="font-bold text-green-600">{neighborhood.avgPrice}</span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-light text-gray-600">Avg Home Price:</span>
+                    <span className="font-light text-orange-600 text-lg">{neighborhood.avgPrice}</span>
                   </div>
-                  <p className="text-slate-600 text-sm">{neighborhood.description}</p>
+                  <p className="text-gray-600 text-sm font-light mb-4">{neighborhood.description}</p>
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div>
+                      <span className="text-gray-500 font-light block">Year Built:</span>
+                      <span className="text-gray-700 font-light">{neighborhood.yearBuilt}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-500 font-light block">Home Styles:</span>
+                      <span className="text-gray-700 font-light">{neighborhood.homeStyles}</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* Why Huntington Beach Homeowners Choose Mo */}
+        {/* Why Choose Sarah Chen for Huntington Beach Real Estate */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Huntington Beach Homeowners Choose Mo The Broker
+            <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-6">
+              Why Choose <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Sarah Chen</span> for Huntington Beach Real Estate
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Waves className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Waves className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Coastal Property Expertise</h3>
-                  <p className="text-slate-600">
-                    Specialized expertise with beachfront properties, flood insurance requirements, 
-                    and coastal zone regulations. Understanding of Surf City lifestyle financing needs.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Coastal Property Expertise</h3>
+                  <p className="text-gray-600 font-light">
+                    Specialized knowledge of beachfront properties, coastal regulations, 
+                    and oceanfront market dynamics. Deep understanding of Surf City lifestyle and community preferences.
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Sun className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Sun className="w-6 h-6 text-yellow-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Beach Lifestyle Lending</h3>
-                  <p className="text-slate-600">
-                    HELOC options for beach home improvements, pier proximity property investments, 
-                    and vacation rental financing. Understanding the unique HB market dynamics.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Beach Lifestyle Marketing</h3>
+                  <p className="text-gray-600 font-light">
+                    Expert marketing strategies for beach properties, vacation rentals, 
+                    and coastal investments. Understanding of seasonal market trends and buyer preferences.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Home className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Users className="w-6 h-6 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Military-Friendly Programs</h3>
-                  <p className="text-slate-600">
-                    Strong military community support with VA loan expertise. Understanding of 
-                    deployment schedules and military family unique lending requirements.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Community Connections</h3>
+                  <p className="text-gray-600 font-light">
+                    Strong network within the Huntington Beach community including local contractors, 
+                    inspectors, and service providers. Active in beach community events and organizations.
                   </p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-blue-50 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Huntington Beach Market Expertise</h3>
+          <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-light text-gray-900 mb-4">Huntington Beach Market Expertise</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Loan Limits (Conforming):</span>
-                <span className="font-bold">$1,089,300</span>
+                <span className="text-gray-700 font-light">Median Home Price:</span>
+                <span className="font-light text-orange-600">$1.2M</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Jumbo Loan Minimum:</span>
-                <span className="font-bold">$1,089,301+</span>
+                <span className="text-gray-700 font-light">Luxury Properties:</span>
+                <span className="font-light text-orange-600">$2M+</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Average HELOC Amount:</span>
-                <span className="font-bold">$250K</span>
+                <span className="text-gray-700 font-light">Days on Market:</span>
+                <span className="font-light text-orange-600">25-35 days</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Flood Insurance:</span>
-                <span className="font-bold">Required in zones</span>
+                <span className="text-gray-700 font-light">Price Appreciation:</span>
+                <span className="font-light text-orange-600">5-7% annually</span>
               </div>
             </div>
-            <div className="mt-6 p-4 bg-white rounded-lg">
-              <h4 className="font-bold text-slate-900 mb-2">Popular HB Programs:</h4>
-              <div className="space-y-1 text-sm text-slate-600">
-                <div>• VA loans for military families</div>
-                <div>• HELOC for beach home improvements</div>
-                <div>• Jumbo loans for oceanfront properties</div>
-                <div>• Cash-out refi for investment opportunities</div>
+            <div className="mt-6 p-4 bg-white rounded-2xl shadow-sm">
+              <h4 className="font-light text-gray-900 mb-2 text-lg">Specializing In:</h4>
+              <div className="space-y-2 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Beachfront & oceanview properties</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Vacation rental investments</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Luxury coastal estates</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Beach lifestyle properties</span>
+                </div>
               </div>
             </div>
           </div>
@@ -274,58 +308,58 @@ export default function HuntingtonBeachMortgageBrokerPage() {
 
         {/* FAQ Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Frequently Asked Questions - Huntington Beach Mortgages
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Frequently Asked <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Questions</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Do beachfront properties require special insurance?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">What makes Huntington Beach properties special?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Yes, properties in certain coastal zones require flood insurance. We help navigate 
-                  FEMA flood zone requirements and connect you with appropriate insurance providers 
-                  to ensure complete financing approval.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Huntington Beach offers 10 miles of pristine coastline, year-round beach lifestyle, 
+                  and strong property appreciation. Beachfront properties provide both luxury living 
+                  and excellent investment potential with vacation rental opportunities.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What's the average home price near the pier?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">What's the price range near the pier?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Properties within walking distance of the Huntington Pier typically range from 
-                  $1.2M to $2M+, depending on size and ocean proximity. These often require 
-                  jumbo financing due to premium locations.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Properties within walking distance of Huntington Pier typically range from 
+                  $1.2M to $3M+, depending on size, condition, and ocean proximity. Prime beachfront 
+                  locations command premium prices due to their irreplaceable coastal position.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Can military families use VA loans for beach properties?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">Is Huntington Beach good for investment properties?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Absolutely! VA loans can be used for primary residences in Huntington Beach, 
-                  including properties near the beach. We specialize in helping military families 
-                  achieve their coastal living dreams with 0% down.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Yes! Huntington Beach is excellent for vacation rentals and investment properties. 
+                  The strong tourist market, year-round appeal, and limited coastal inventory 
+                  create solid rental income potential and long-term appreciation.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Are there programs for vacation rental properties?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">How quickly do beach properties sell?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Yes, we offer investment property loans for vacation rentals and short-term rental 
-                  properties. HELOCs can also provide flexible funding for property improvements 
-                  and furnishing vacation rentals.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Well-priced beachfront properties typically sell within 30-45 days. Prime oceanfront 
+                  locations with proper marketing can attract multiple offers. The key is strategic 
+                  pricing and showcasing the unique coastal lifestyle benefits.
                 </p>
               </CardContent>
             </Card>
@@ -333,27 +367,27 @@ export default function HuntingtonBeachMortgageBrokerPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready for Your Huntington Beach Mortgage?
+        <div className="text-center bg-gradient-to-r from-amber-600 to-orange-500 rounded-2xl p-8 text-white shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-extralight mb-4">
+            Ready to Find Your <span className="font-light">Dream Beach Home?</span>
           </h2>
-          <p className="text-xl mb-6 text-blue-100">
-            Get personalized rates for your Surf City neighborhood and loan needs
+          <p className="text-xl font-light mb-6 text-orange-100">
+            Let's explore Huntington Beach properties that match your coastal lifestyle dreams
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold">
-                Get My HB Rates
+              <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 text-lg font-light shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Search Beach Properties
               </Button>
             </Link>
-            <a href="tel:(949) 579-2057">
-              <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                Call (949) 579-2057
+            <a href="tel:(949) 555-0123">
+              <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 text-lg font-light">
+                Call (949) 555-0123
               </Button>
             </a>
           </div>
-          <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Huntington Beach neighborhoods
+          <p className="text-sm text-orange-200 mt-4 font-light">
+            Sarah Chen, Real Estate Agent • DRE #02145678 • Specializing in Huntington Beach coastal properties
           </p>
         </div>
       </div>

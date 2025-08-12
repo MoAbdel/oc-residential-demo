@@ -3,96 +3,109 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase } from 'lucide-react';
+import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase, Phone, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Santa Ana Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Santa Ana wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Downtown, Floral Park, French Park. Call (949) 579-2057.',
-  keywords: 'Santa Ana wholesale mortgage broker, Santa Ana home loans, Santa Ana HELOC, Downtown Santa Ana mortgage, Floral Park loans, French Park wholesale mortgage broker'
+  title: 'Santa Ana Real Estate Agent | Homes for Sale & Cultural Properties | Sarah Chen',
+  description: 'Expert Santa Ana real estate agent specializing in diverse communities, downtown revitalization, and affordable housing. Professional home buying & selling in Santa Ana. Call (949) 555-0123.',
+  keywords: 'Santa Ana real estate agent, Santa Ana homes for sale, Downtown Santa Ana properties, Floral Park homes, French Park real estate, cultural diversity housing'
 };
 
-export default function SantaAnaMortgageBrokerPage() {
+export default function SantaAnaRealEstatePage() {
   const santaAnaNeighborhoods = [
     {
       name: 'Downtown Santa Ana',
-      avgPrice: '$550K',
-      description: 'Urban core with historic buildings, arts district, and new development'
+      avgPrice: '$650K',
+      description: 'Urban core with historic buildings, arts district, and new development',
+      yearBuilt: '1920s-2020s',
+      homeStyles: 'Historic buildings, Modern condos'
     },
     {
       name: 'Floral Park', 
-      avgPrice: '$800K',
-      description: 'Historic district with charming 1920s homes and tree-lined streets'
+      avgPrice: '$900K',
+      description: 'Historic district with charming 1920s homes and tree-lined streets',
+      yearBuilt: '1920s-1940s',
+      homeStyles: 'Colonial Revival, Spanish Revival'
     },
     {
       name: 'French Park',
-      avgPrice: '$700K',
-      description: 'Family neighborhood with parks, schools, and community amenities'
+      avgPrice: '$750K',
+      description: 'Family neighborhood with parks, schools, and community amenities',
+      yearBuilt: '1950s-1980s',
+      homeStyles: 'Ranch style, Traditional'
     },
     {
       name: 'Park Santiago',
-      avgPrice: '$650K',
-      description: 'Established area with mid-century homes and mature landscaping'
+      avgPrice: '$700K',
+      description: 'Established area with mid-century homes and mature landscaping',
+      yearBuilt: '1960s-1980s',
+      homeStyles: 'Mid-century modern, Ranch'
     },
     {
       name: 'Willard',
-      avgPrice: '$600K',
-      description: 'Diverse community with affordable housing and growing development'
+      avgPrice: '$650K',
+      description: 'Diverse community with affordable housing and growing development',
+      yearBuilt: '1940s-1990s',
+      homeStyles: 'Craftsman, Traditional'
     },
     {
       name: 'Delhi',
-      avgPrice: '$550K',
-      description: 'Historic area with craftsman homes and cultural significance'
+      avgPrice: '$600K',
+      description: 'Historic area with craftsman homes and cultural significance',
+      yearBuilt: '1910s-1950s',
+      homeStyles: 'Craftsman, Bungalow'
     }
   ];
 
-  const loanPrograms = [
+  const realEstateServices = [
     {
-      title: 'FHA Loans for Santa Ana',
-      description: 'Low down payment government-backed loans perfect for homeownership',
-      benefits: ['3.5% down payment', 'Credit scores from 500+', 'Flexible qualification'],
-      icon: <Heart className="w-8 h-8 text-blue-600" />
+      title: 'Cultural Community Properties',
+      description: 'Specialized expertise in Santa Ana\'s diverse cultural communities and housing needs',
+      benefits: ['Multilingual service capabilities', 'Cultural sensitivity expertise', 'Community connections'],
+      icon: <Heart className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'First-Time Buyer Programs',
-      description: 'Special programs and down payment assistance for new homeowners',
-      benefits: ['Down payment assistance', 'Reduced closing costs', 'Educational resources'],
-      icon: <Home className="w-8 h-8 text-green-600" />
+      title: 'First-Time Homebuyer Support',
+      description: 'Dedicated guidance for first-time buyers navigating the Santa Ana market',
+      benefits: ['Down payment assistance programs', 'Educational workshops', 'Affordable housing expertise'],
+      icon: <Home className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'HELOC for Improvements',
-      description: 'Access your home equity for renovations and property improvements',
-      benefits: ['Up to $500K credit lines', 'Prime + 0% intro rates', 'Tax-deductible interest'],
-      icon: <TrendingUp className="w-8 h-8 text-purple-600" />
+      title: 'Urban Development Properties',
+      description: 'Expert knowledge of Santa Ana\'s downtown revitalization and investment opportunities',
+      benefits: ['Historic property expertise', 'New development insights', 'Investment potential analysis'],
+      icon: <TrendingUp className="w-8 h-8 text-orange-500" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-flex items-center bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <MapPin className="w-4 h-4 mr-2" />
             Serving All Santa Ana Communities
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Santa Ana</span> Wholesale Mortgage Broker
+          <h1 className="text-4xl md:text-5xl font-extralight text-gray-900 mb-6">
+            Santa Ana <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Real Estate</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Santa Ana homebuyers and homeowners. Specializing in 
-            FHA loans, first-time buyer programs, and HELOC for Downtown, Floral Park, 
-            French Park, and all Santa Ana communities.
+          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto mb-8">
+            Your trusted Santa Ana real estate agent specializing in cultural diversity, 
+            downtown revitalization, and affordable housing from Floral Park to French Park 
+            and all Santa Ana neighborhoods.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Get Santa Ana Mortgage Rates
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-8 py-3 text-lg font-light shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Search Santa Ana Properties
               </Button>
             </Link>
-            <a href="tel:(949) 579-2057">
-              <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Call (949) 579-2057
+            <a href="tel:(949) 555-0123">
+              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-3 text-lg font-light">
+                <Phone className="w-4 h-4 mr-2" />
+                Call (949) 555-0123
               </Button>
             </a>
           </div>
@@ -100,62 +113,62 @@ export default function SantaAnaMortgageBrokerPage() {
 
         {/* Santa Ana Market Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Home className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">$650K</h3>
-            <p className="text-slate-600">Median Home Price</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Building2 className="w-8 h-8 text-orange-600" />
+              <Home className="w-8 h-8 text-orange-500" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">#2</h3>
-            <p className="text-slate-600">Largest OC City</p>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">$700K</h3>
+            <p className="text-gray-600 font-light">Median Home Price</p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Building2 className="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">#2</h3>
+            <p className="text-gray-600 font-light">Largest OC City</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Briefcase className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">County</h3>
-            <p className="text-slate-600">Seat of Orange</p>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">County</h3>
+            <p className="text-gray-600 font-light">Seat of Orange</p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center border border-gray-100">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="w-8 h-8 text-purple-600" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">332K+</h3>
-            <p className="text-slate-600">Population</p>
+            <h3 className="text-2xl font-light text-gray-900 mb-1">332K+</h3>
+            <p className="text-gray-600 font-light">Population</p>
           </div>
         </div>
 
-        {/* Specialized Loan Programs */}
+        {/* Real Estate Services */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Mortgage Solutions for Santa Ana Homeowners
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Santa Ana Real Estate <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Specialties</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {loanPrograms.map((program, index) => (
-              <Card key={index} className="border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
+            {realEstateServices.map((service, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-6">
                   <div className="flex items-center space-x-4 mb-4">
-                    {program.icon}
-                    <CardTitle className="text-xl">{program.title}</CardTitle>
+                    {service.icon}
+                    <CardTitle className="text-xl font-light text-gray-900">{service.title}</CardTitle>
                   </div>
-                  <p className="text-slate-600">{program.description}</p>
+                  <p className="text-gray-600 font-light">{service.description}</p>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 mb-6">
-                    {program.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-center text-sm text-slate-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                <CardContent className="pt-6">
+                  <div className="space-y-3 mb-6">
+                    {service.benefits.map((benefit, i) => (
+                      <div key={i} className="flex items-center text-sm text-gray-700 font-light">
+                        <CheckCircle className="w-4 h-4 text-orange-500 mr-3 flex-shrink-0" />
                         {benefit}
                       </div>
                     ))}
                   </div>
-                  <Link href="/loan-programs">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Link href="/services">
+                    <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-light">
                       Learn More
                     </Button>
                   </Link>
@@ -167,105 +180,127 @@ export default function SantaAnaMortgageBrokerPage() {
 
         {/* Santa Ana Neighborhoods */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Santa Ana Neighborhoods We Serve
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Cultural Communities <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">We Serve</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {santaAnaNeighborhoods.map((neighborhood, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+                <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-6">
+                  <CardTitle className="flex items-center text-xl font-light text-gray-900">
+                    <MapPin className="w-5 h-5 text-orange-500 mr-2" />
                     {neighborhood.name}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-slate-600">Avg Home Price:</span>
-                    <span className="font-bold text-green-600">{neighborhood.avgPrice}</span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-light text-gray-600">Avg Home Price:</span>
+                    <span className="font-light text-orange-600 text-lg">{neighborhood.avgPrice}</span>
                   </div>
-                  <p className="text-slate-600 text-sm">{neighborhood.description}</p>
+                  <p className="text-gray-600 text-sm font-light mb-4">{neighborhood.description}</p>
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div>
+                      <span className="text-gray-500 font-light block">Year Built:</span>
+                      <span className="text-gray-700 font-light">{neighborhood.yearBuilt}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-500 font-light block">Home Styles:</span>
+                      <span className="text-gray-700 font-light">{neighborhood.homeStyles}</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* Why Santa Ana Homeowners Choose Mo */}
+        {/* Why Choose Sarah Chen for Santa Ana Real Estate */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Santa Ana Homeowners Choose Mo The Broker
+            <h2 className="text-3xl md:text-4xl font-extralight text-gray-900 mb-6">
+              Why Choose <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Sarah Chen</span> for Santa Ana Real Estate
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Heart className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Heart className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Affordable Homeownership Focus</h3>
-                  <p className="text-slate-600">
-                    Dedicated to helping Santa Ana families achieve homeownership with FHA loans, 
-                    down payment assistance programs, and flexible qualification guidelines.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Affordable Homeownership Focus</h3>
+                  <p className="text-gray-600 font-light">
+                    Dedicated to helping Santa Ana families achieve homeownership with expert guidance 
+                    on affordable housing options, first-time buyer programs, and down payment assistance.
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Users className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Users className="w-6 h-6 text-green-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Community-Centered Service</h3>
-                  <p className="text-slate-600">
-                    Understanding of Santa Ana's diverse communities and cultural needs. 
-                    Bilingual support and culturally sensitive mortgage guidance available.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Cultural Community Expertise</h3>
+                  <p className="text-gray-600 font-light">
+                    Deep understanding of Santa Ana's diverse communities and cultural needs. 
+                    Multilingual support and culturally sensitive real estate guidance available.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Building2 className="w-6 h-6 text-orange-600" />
+                <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mr-4 mt-1">
+                  <Building2 className="w-6 h-6 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Urban Development Expertise</h3>
-                  <p className="text-slate-600">
-                    Knowledge of Santa Ana's downtown revitalization and growing arts district. 
-                    Lending solutions for condos, historic homes, and new developments.
+                  <h3 className="text-xl font-light text-gray-900 mb-2">Urban Development Knowledge</h3>
+                  <p className="text-gray-600 font-light">
+                    Expert knowledge of Santa Ana's downtown revitalization and arts district growth. 
+                    Specializing in condos, historic homes, and new development opportunities.
                   </p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-blue-50 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Santa Ana Market Expertise</h3>
+          <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-light text-gray-900 mb-4">Santa Ana Market Expertise</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">FHA Loan Limit:</span>
-                <span className="font-bold">$1,089,300</span>
+                <span className="text-gray-700 font-light">Median Home Price:</span>
+                <span className="font-light text-orange-600">$700K</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Conventional Limit:</span>
-                <span className="font-bold">$1,089,300</span>
+                <span className="text-gray-700 font-light">First-Time Buyer Range:</span>
+                <span className="font-light text-orange-600">$500K-$650K</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Average HELOC Amount:</span>
-                <span className="font-bold">$125K</span>
+                <span className="text-gray-700 font-light">Days on Market:</span>
+                <span className="font-light text-orange-600">35-45 days</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-700">Property Tax Rate:</span>
-                <span className="font-bold">~0.73%</span>
+                <span className="text-gray-700 font-light">Price Appreciation:</span>
+                <span className="font-light text-orange-600">4-6% annually</span>
               </div>
             </div>
-            <div className="mt-6 p-4 bg-white rounded-lg">
-              <h4 className="font-bold text-slate-900 mb-2">Popular Santa Ana Programs:</h4>
-              <div className="space-y-1 text-sm text-slate-600">
-                <div>• FHA loans for first-time buyers</div>
-                <div>• Down payment assistance programs</div>
-                <div>• HELOC for home improvements</div>
-                <div>• Historic home renovation loans</div>
+            <div className="mt-6 p-4 bg-white rounded-2xl shadow-sm">
+              <h4 className="font-light text-gray-900 mb-2 text-lg">Specializing In:</h4>
+              <div className="space-y-2 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">First-time buyer assistance</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Historic district properties</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Downtown revitalization</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
+                  <span className="font-light">Affordable housing options</span>
+                </div>
               </div>
             </div>
           </div>
@@ -274,58 +309,58 @@ export default function SantaAnaMortgageBrokerPage() {
 
         {/* FAQ Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Frequently Asked Questions - Santa Ana Mortgages
+          <h2 className="text-3xl md:text-4xl font-extralight text-center mb-8 text-gray-900">
+            Frequently Asked <span className="font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">Questions</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What down payment assistance is available?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">What makes Santa Ana a great place to buy?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Orange County and Santa Ana offer various down payment assistance programs 
-                  for first-time buyers and income-qualified families. We help identify and 
-                  coordinate these programs with your mortgage.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Santa Ana offers cultural diversity, affordable housing options compared to coastal areas, 
+                  downtown revitalization, and strong community connections. It's the county seat with 
+                  excellent schools and growing arts district.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Can I buy a historic home in Floral Park?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">How is the historic Floral Park district?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Yes! We have experience with historic district purchases and renovation loans. 
-                  Historic homes may qualify for special renovation financing programs and 
-                  tax credits for preservation efforts.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Floral Park is a designated historic district with charming 1920s architecture, 
+                  tree-lined streets, and strong community pride. Properties here appreciate well 
+                  and offer unique character with modern conveniences.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Are there programs for low to moderate income buyers?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">Are there affordable options for first-time buyers?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Absolutely! FHA loans, USDA rural development loans (for eligible areas), 
-                  and local first-time buyer programs offer flexible qualification and 
-                  reduced down payment requirements.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Yes! Santa Ana offers more affordable housing than many OC cities, plus first-time 
+                  buyer programs and down payment assistance. I can help navigate these opportunities 
+                  and find the perfect starter home.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">How do I qualify for a condo loan downtown?</CardTitle>
+            <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-br from-stone-50 to-gray-50 pb-4">
+                <CardTitle className="text-lg font-light text-gray-900">What's happening with downtown development?</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
-                  Downtown condos require lender approval of the HOA and building financial 
-                  health. We work with FHA-approved condo projects and have relationships 
-                  with lenders experienced in urban condo financing.
+              <CardContent className="pt-4">
+                <p className="text-gray-600 font-light">
+                  Downtown Santa Ana is experiencing significant revitalization with new condos, 
+                  restaurants, arts venues, and transit improvements. This creates excellent 
+                  investment opportunities and urban lifestyle options.
                 </p>
               </CardContent>
             </Card>
@@ -333,27 +368,27 @@ export default function SantaAnaMortgageBrokerPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready for Your Santa Ana Mortgage?
+        <div className="text-center bg-gradient-to-r from-amber-600 to-orange-500 rounded-2xl p-8 text-white shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-extralight mb-4">
+            Ready to Find Your <span className="font-light">Santa Ana Home?</span>
           </h2>
-          <p className="text-xl mb-6 text-blue-100">
-            Get personalized rates for your Santa Ana neighborhood and loan needs
+          <p className="text-xl font-light mb-6 text-orange-100">
+            Let's explore Santa Ana's diverse communities and find your perfect home
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold">
-                Get My Santa Ana Rates
+              <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 text-lg font-light shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Search Santa Ana Properties
               </Button>
             </Link>
-            <a href="tel:(949) 579-2057">
-              <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                Call (949) 579-2057
+            <a href="tel:(949) 555-0123">
+              <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 text-lg font-light">
+                Call (949) 555-0123
               </Button>
             </a>
           </div>
-          <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Santa Ana neighborhoods
+          <p className="text-sm text-orange-200 mt-4 font-light">
+            Sarah Chen, Real Estate Agent • DRE #02145678 • Specializing in Santa Ana cultural communities
           </p>
         </div>
       </div>
