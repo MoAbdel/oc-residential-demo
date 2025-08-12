@@ -23,7 +23,6 @@ const services = [
     description: 'Expert guidance through every step of your home purchase journey in Orange County.',
     features: ['Market Analysis', 'Property Search', 'Negotiation', 'Closing Support'],
     link: '/services/home-buying',
-    color: 'blue'
   },
   {
     icon: TrendingUp,
@@ -31,7 +30,6 @@ const services = [
     description: 'Maximize your home\'s value with strategic marketing and expert pricing.',
     features: ['Market Valuation', 'Professional Marketing', 'Staging Advice', 'Quick Sales'],
     link: '/services/home-selling',
-    color: 'green'
   },
   {
     icon: Users,
@@ -39,7 +37,6 @@ const services = [
     description: 'Build wealth through Orange County real estate investment opportunities.',
     features: ['Investment Analysis', 'Rental Properties', 'Fix & Flip', 'Portfolio Growth'],
     link: '/services/investment-properties',
-    color: 'purple'
   },
   {
     icon: Award,
@@ -47,7 +44,6 @@ const services = [
     description: 'Special support and guidance for first-time homebuyers in Orange County.',
     features: ['Education & Guidance', 'Down Payment Assistance', 'Lender Connections', 'Step-by-Step Support'],
     link: '/services/first-time-buyer',
-    color: 'orange'
   },
   {
     icon: Shield,
@@ -55,7 +51,6 @@ const services = [
     description: 'Exclusive service for luxury properties and high-end real estate transactions.',
     features: ['Luxury Market Expertise', 'Discreet Marketing', 'High-Net-Worth Clients', 'Premium Service'],
     link: '/services/luxury-homes',
-    color: 'indigo'
   },
   {
     icon: Star,
@@ -63,7 +58,6 @@ const services = [
     description: 'Complete relocation support for moving to or from Orange County.',
     features: ['Area Orientation', 'School Information', 'Community Resources', 'Moving Coordination'],
     link: '/services/relocation',
-    color: 'pink'
   }
 ];
 
@@ -71,28 +65,36 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-amber-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge className="bg-white/20 text-white mb-4 border-white/30">
+            <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect text-amber-600 text-sm font-light mb-4">
+              <Award className="w-4 h-4 mr-2" />
               Professional Real Estate Services
-            </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Comprehensive Real Estate Services in Orange County
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight">
+              Comprehensive
+              <span className="block font-light bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                Real Estate Services
+              </span>
+              <span className="block text-3xl md:text-4xl mt-2">in Orange County</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-white/90 font-light max-w-4xl mx-auto leading-relaxed">
               From first-time buyers to luxury estates, Sarah Chen provides expert real estate services 
               tailored to your unique needs in Orange County's competitive market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-light px-8 py-4 text-lg transition-all duration-300 shadow-xl hover:shadow-2xl">
                   Start Your Journey
                 </Button>
               </Link>
               <Link href="tel:+19495550123">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-gray-900 font-light px-8 py-4 text-lg transition-all duration-300 backdrop-blur-sm">
                   Call (949) 555-0123
                 </Button>
               </Link>
@@ -102,13 +104,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-24 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Expert Real Estate Services
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extralight text-gray-900 mb-6">
+              Expert
+              <span className="block font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
+                Real Estate Services
+              </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto">
               Whether you're buying, selling, or investing, Sarah Chen provides personalized service 
               and market expertise for every real estate need.
             </p>
@@ -116,92 +121,102 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-lg border-0 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <CardContent className="p-6">
-                  <div className={`w-12 h-12 bg-gradient-to-br from-${service.color}-100 to-${service.color}-200 rounded-lg flex items-center justify-center mb-4`}>
-                    <service.icon className={`w-6 h-6 text-${service.color}-600`} />
+              <div key={index} className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-amber-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 mb-4">{service.description}</p>
+                  <h3 className="text-2xl font-light text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 font-light mb-6 leading-relaxed">{service.description}</p>
                   
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-3 mb-8">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-slate-700">
-                        <div className={`w-2 h-2 bg-${service.color}-500 rounded-full mr-2`}></div>
+                      <div key={idx} className="flex items-center text-sm font-light text-gray-700">
+                        <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-500 rounded-full mr-3"></div>
                         {feature}
                       </div>
                     ))}
                   </div>
                   
                   <Link href={service.link}>
-                    <Button className={`w-full bg-${service.color}-600 hover:bg-${service.color}-700 text-white`}>
+                    <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-light py-3 rounded-xl text-base transition-all duration-300 shadow-lg hover:shadow-xl">
                       Learn More
                     </Button>
                   </Link>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Sarah */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Choose Sarah Chen?
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extralight text-gray-900 mb-6">
+              Why Choose
+              <span className="block font-light bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
+                Sarah Chen?
+              </span>
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl font-light text-gray-600">
               Experience, expertise, and dedication to your real estate success.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">5+</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-light text-amber-600">5+</span>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Years Experience</h3>
-              <p className="text-slate-600">Proven track record in Orange County real estate</p>
+              <h3 className="text-2xl font-light text-gray-900 mb-3">Years Experience</h3>
+              <p className="text-gray-600 font-light">Proven track record in Orange County real estate</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">200+</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-light text-amber-600">200+</span>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Happy Clients</h3>
-              <p className="text-slate-600">Successful transactions and satisfied customers</p>
+              <h3 className="text-2xl font-light text-gray-900 mb-3">Happy Clients</h3>
+              <p className="text-gray-600 font-light">Successful transactions and satisfied customers</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">24/7</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-light text-amber-600">24/7</span>
               </div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Client Support</h3>
-              <p className="text-slate-600">Always available for your real estate needs</p>
+              <h3 className="text-2xl font-light text-gray-900 mb-3">Client Support</h3>
+              <p className="text-gray-600 font-light">Always available for your real estate needs</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Real Estate Journey?
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-amber-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-extralight mb-6 leading-tight">
+            Ready to Start Your
+            <span className="block font-light bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+              Real Estate Journey?
+            </span>
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-white/90 font-light max-w-3xl mx-auto leading-relaxed">
             Let Sarah Chen guide you through Orange County's real estate market with expert advice and personalized service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+              <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-light px-8 py-4 text-lg transition-all duration-300 shadow-xl hover:shadow-2xl">
                 Get Started Today
               </Button>
             </Link>
             <Link href="tel:+19495550123">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-gray-900 font-light px-8 py-4 text-lg transition-all duration-300 backdrop-blur-sm">
                 Call (949) 555-0123
               </Button>
             </Link>
