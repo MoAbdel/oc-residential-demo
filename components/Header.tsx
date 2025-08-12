@@ -78,16 +78,16 @@ export default function Header() {
   const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-transparent backdrop-blur-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
-            <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-              <div className="text-2xl md:text-3xl font-bold text-orange-500">
+            <div className="flex flex-col">
+              <div className="text-2xl md:text-3xl font-bold text-orange-500 whitespace-nowrap">
                 Sarah Chen
               </div>
-              <div className="text-sm md:text-base font-normal text-orange-400">
+              <div className="text-sm md:text-base font-normal text-orange-400 whitespace-nowrap">
                 Orange County Real Estate
               </div>
             </div>
@@ -116,11 +116,11 @@ export default function Header() {
                     }}
                   >
                     <button
-                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Services' && pathname.startsWith('/services')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
-                          ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
-                          : 'text-orange-400 hover:text-orange-500 hover:bg-white/10 backdrop-blur-sm'
+                          ? 'text-orange-500 bg-orange-50'
+                          : 'text-orange-400 hover:text-orange-500 hover:bg-orange-50'
                       }`}
                     >
                       {item.title}
@@ -149,7 +149,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.url}
-                    className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                    className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                       pathname === item.url
                         ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
                         : 'text-orange-400 hover:text-orange-500 hover:bg-white/10 backdrop-blur-sm'
@@ -164,7 +164,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:(949) 555-0123" className="text-orange-500 font-medium hover:text-orange-400">
+            <a href="tel:(949) 555-0123" className="text-orange-500 font-medium hover:text-orange-400 whitespace-nowrap">
               (949) 555-0123
             </a>
             <Link href="/contact">
