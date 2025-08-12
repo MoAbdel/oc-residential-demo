@@ -17,20 +17,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="mb-4">
               <div className="text-3xl font-bold text-orange-500">
                 Sarah Chen
                 <div className="text-lg font-normal text-orange-400">
                   Orange County Real Estate
                 </div>
-              </div>
-              <div className="relative h-20 w-auto">
-                <Image 
-                  src="/images/equal-housing.webp"
-                  alt="Equal Housing Opportunity" 
-                  width={80}
-                  height={80}
-                />
               </div>
             </div>
             <p className="text-gray-600 mb-4">
