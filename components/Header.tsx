@@ -83,9 +83,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold text-white">
+            <div className="text-2xl md:text-3xl font-bold text-orange-500">
               Sarah Chen
-              <div className="text-sm md:text-base font-normal text-white/80">
+              <div className="text-sm md:text-base font-normal text-orange-400">
                 Orange County Real Estate
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Header() {
                         (item.page === 'Services' && pathname.startsWith('/services')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
                           ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
-                          : 'text-white/90 hover:text-orange-400 hover:bg-white/10 backdrop-blur-sm'
+                          : 'text-orange-400 hover:text-orange-500 hover:bg-white/10 backdrop-blur-sm'
                       }`}
                     >
                       {item.title}
@@ -150,7 +150,7 @@ export default function Header() {
                     className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       pathname === item.url
                         ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
-                        : 'text-white/90 hover:text-orange-400 hover:bg-white/10 backdrop-blur-sm'
+                        : 'text-orange-400 hover:text-orange-500 hover:bg-white/10 backdrop-blur-sm'
                     }`}
                   >
                     {item.title}
@@ -162,11 +162,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:(949) 555-0123" className="text-white font-medium hover:text-orange-400">
+            <a href="tel:(949) 555-0123" className="text-orange-500 font-medium hover:text-orange-400">
               (949) 555-0123
             </a>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
                 Contact Me
               </Button>
             </Link>
@@ -243,7 +243,7 @@ export default function Header() {
                 (949) 555-0123
               </a>
               <Link href="/contact" className="block px-3 py-2">
-                <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white shadow-lg hover:shadow-xl">
+                <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white shadow-lg hover:shadow-xl flex items-center justify-center">
                   Contact Me
                 </Button>
               </Link>
