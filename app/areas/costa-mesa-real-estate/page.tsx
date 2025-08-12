@@ -3,66 +3,78 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building } from 'lucide-react';
+import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building, Star, Award, Phone, Building2, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Costa Mesa Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Costa Mesa wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving South Coast Plaza area, Mesa Verde, Eastside. Call (949) 579-2057.',
-  keywords: 'Costa Mesa wholesale mortgage broker, Costa Mesa home loans, Costa Mesa HELOC, South Coast Plaza mortgage, Mesa Verde loans, Eastside Costa Mesa wholesale mortgage broker'
+  title: 'Costa Mesa Real Estate Agent | Urban Living & Arts District Homes | Sarah Chen DRE #02145678',
+  description: 'Expert Costa Mesa real estate agent specializing in South Coast Metro, Mesa Verde, and Arts District properties. Urban living and diverse housing options. Call (949) 555-0123.',
+  keywords: 'Costa Mesa real estate agent, Costa Mesa homes for sale, South Coast Metro real estate, Mesa Verde homes, Arts District properties'
 };
 
-export default function CostaMesaMortgageBrokerPage() {
+export default function CostaMesaRealEstatePage() {
   const costaMesaNeighborhoods = [
     {
       name: 'South Coast Metro',
-      avgPrice: '$1.1M',
-      description: 'Business district near South Coast Plaza with luxury condos and townhomes'
+      avgPrice: '$800K - $2M',
+      description: 'Business district near South Coast Plaza with luxury condos and townhomes',
+      yearBuilt: '1970s-2020s',
+      homeStyles: 'Luxury condos, Modern townhomes'
     },
     {
       name: 'Mesa Verde', 
-      avgPrice: '$950K',
-      description: 'Established neighborhood with tree-lined streets and family homes'
+      avgPrice: '$800K - $1.2M',
+      description: 'Established neighborhood with tree-lined streets and family homes',
+      yearBuilt: '1960s-1980s',
+      homeStyles: 'Single-family ranch, Traditional'
     },
     {
       name: 'Eastside Costa Mesa',
-      avgPrice: '$850K',
-      description: 'Diverse area with cultural attractions and growing arts scene'
+      avgPrice: '$600K - $900K',
+      description: 'Diverse area with cultural attractions and growing arts scene',
+      yearBuilt: '1950s-1990s',
+      homeStyles: 'Craftsman, Mid-century modern'
     },
     {
       name: 'Newport Heights',
-      avgPrice: '$1.2M',
-      description: 'Upscale area bordering Newport Beach with custom homes'
+      avgPrice: '$900K - $1.5M',
+      description: 'Upscale area bordering Newport Beach with custom homes',
+      yearBuilt: '1960s-2000s',
+      homeStyles: 'Custom homes, Contemporary'
     },
     {
       name: 'Harbor View Hills',
-      avgPrice: '$900K',
-      description: 'Hillside community with views and newer construction'
+      avgPrice: '$700K - $1.1M',
+      description: 'Hillside community with views and newer construction',
+      yearBuilt: '1980s-2010s',
+      homeStyles: 'Contemporary, Mediterranean'
     },
     {
       name: 'College Park',
-      avgPrice: '$800K',
-      description: 'Affordable area near Orange Coast College with starter homes'
+      avgPrice: '$600K - $850K',
+      description: 'Affordable area near Orange Coast College with starter homes',
+      yearBuilt: '1950s-1980s',
+      homeStyles: 'Ranch, Traditional tract homes'
     }
   ];
 
-  const loanPrograms = [
+  const realEstateServices = [
     {
-      title: 'HELOC for Costa Mesa Homes',
-      description: 'Access your home equity for improvements, education, or business ventures',
-      benefits: ['Up to $500K credit lines', 'Prime + 0% intro rates', 'No closing costs available'],
-      icon: <TrendingUp className="w-8 h-8 text-blue-600" />
+      title: 'Urban Living Specialist',
+      description: 'Expert guidance on Costa Mesa\'s diverse urban living options from luxury condos to artistic lofts',
+      features: ['South Coast Metro expertise', 'Arts District knowledge', 'Mixed-use development insights', 'Urban lifestyle consulting'],
+      icon: <Building2 className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'Conventional Loans',
-      description: 'Standard financing for Costa Mesa homes with competitive rates',
-      benefits: ['As low as 3% down payment', 'No PMI with 20% down', 'Flexible loan terms'],
-      icon: <Building className="w-8 h-8 text-green-600" />
+      title: 'Investment Property Services',
+      description: 'Strategic guidance for Costa Mesa real estate investments in growing arts and business districts',
+      features: ['Rental market analysis', 'Growth area identification', 'Investment property sourcing', 'Portfolio optimization'],
+      icon: <TrendingUp className="w-8 h-8 text-orange-500" />
     },
     {
-      title: 'FHA Loans',
-      description: 'Government-backed loans with low down payment requirements',
-      benefits: ['3.5% down payment', 'Credit scores from 500+', 'Assumable loans'],
-      icon: <Home className="w-8 h-8 text-purple-600" />
+      title: 'First-Time Buyer Support',
+      description: 'Comprehensive support for buyers entering Costa Mesa\'s diverse and accessible housing market',
+      features: ['Affordable housing options', 'Down payment assistance', 'Neighborhood guidance', 'Market education'],
+      icon: <Star className="w-8 h-8 text-orange-500" />
     }
   ];
 
@@ -72,27 +84,26 @@ export default function CostaMesaMortgageBrokerPage() {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <MapPin className="w-4 h-4 mr-2" />
-            Serving All Costa Mesa Neighborhoods
+          <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 px-4 py-2 rounded-full text-sm font-extralight mb-4">
+            🎨 Urban Arts & Culture
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Costa Mesa</span> Wholesale Mortgage Broker
+          <h1 className="text-4xl md:text-5xl font-extralight text-slate-900 mb-6">
+            <span className="bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent font-light">Costa Mesa</span> Real Estate Agent
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Costa Mesa homebuyers and homeowners. Specializing in 
-            HELOC, conventional loans, and refinancing for South Coast Plaza, Mesa Verde, 
-            Eastside, and all Costa Mesa communities.
+          <p className="text-xl font-light text-slate-600 max-w-3xl mx-auto mb-8">
+            Specializing in Costa Mesa's vibrant urban living, from South Coast Metro luxury to Arts District creativity. 
+            Expert knowledge of diverse housing options and cultural communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Get Costa Mesa Mortgage Rates
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-8 py-3 text-lg font-light">
+                View Costa Mesa Homes
               </Button>
             </Link>
-            <a href="tel:(949) 579-2057">
-              <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Call (949) 579-2057
+            <a href="tel:(949) 555-0123">
+              <Button variant="ghost" className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 text-lg font-light">
+                <Phone className="w-5 h-5 mr-2" />
+                (949) 555-0123
               </Button>
             </a>
           </div>
@@ -100,62 +111,68 @@ export default function CostaMesaMortgageBrokerPage() {
 
         {/* Costa Mesa Market Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Home className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">$950K</h3>
-            <p className="text-slate-600">Median Home Price</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <ShoppingBag className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">#1</h3>
-            <p className="text-slate-600">Shopping Destination</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Palette className="w-8 h-8 text-purple-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">50+</h3>
-            <p className="text-slate-600">Art Galleries</p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-orange-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-1">113K+</h3>
-            <p className="text-slate-600">Population</p>
-          </div>
+          <Card className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-light text-slate-900 mb-1">$950K</h3>
+              <p className="text-slate-600 font-extralight">Median Home Price</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ShoppingBag className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-light text-slate-900 mb-1">#1</h3>
+              <p className="text-slate-600 font-extralight">Shopping Destination</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Palette className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-light text-slate-900 mb-1">50+</h3>
+              <p className="text-slate-600 font-extralight">Art Galleries</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-light text-slate-900 mb-1">113K+</h3>
+              <p className="text-slate-600 font-extralight">Population</p>
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Specialized Loan Programs */}
+        {/* Real Estate Services */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Mortgage Solutions for Costa Mesa Homeowners
-          </h2>
+          <h2 className="text-3xl font-light text-center mb-8">Costa Mesa Real Estate Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {loanPrograms.map((program, index) => (
-              <Card key={index} className="border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
+            {realEstateServices.map((service, index) => (
+              <Card key={index} className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50 border-2 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
                 <CardHeader>
                   <div className="flex items-center space-x-4 mb-4">
-                    {program.icon}
-                    <CardTitle className="text-xl">{program.title}</CardTitle>
+                    {service.icon}
+                    <CardTitle className="text-xl font-light">{service.title}</CardTitle>
                   </div>
-                  <p className="text-slate-600">{program.description}</p>
+                  <p className="text-slate-600 font-extralight">{service.description}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-6">
-                    {program.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-center text-sm text-slate-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                        {benefit}
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center text-sm text-slate-700 font-extralight">
+                        <div className="w-2 h-2 bg-gradient-to-r from-amber-600 to-orange-500 rounded-full mr-3"></div>
+                        {feature}
                       </div>
                     ))}
                   </div>
-                  <Link href="/loan-programs">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Link href="/services">
+                    <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 font-light">
                       Learn More
                     </Button>
                   </Link>
@@ -167,24 +184,32 @@ export default function CostaMesaMortgageBrokerPage() {
 
         {/* Costa Mesa Neighborhoods */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Costa Mesa Neighborhoods We Serve
-          </h2>
+          <h2 className="text-3xl font-light text-center mb-8">Costa Mesa Neighborhoods</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {costaMesaNeighborhoods.map((neighborhood, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="rounded-2xl shadow-lg bg-gradient-to-br from-white to-orange-50 hover:shadow-xl transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+                  <CardTitle className="flex items-center text-lg font-light">
+                    <MapPin className="w-5 h-5 text-orange-600 mr-2" />
                     {neighborhood.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-slate-600">Avg Home Price:</span>
-                    <span className="font-bold text-green-600">{neighborhood.avgPrice}</span>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-slate-600 font-extralight">Price Range:</span>
+                      <span className="font-light text-orange-600">{neighborhood.avgPrice}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-slate-600 font-extralight">Year Built:</span>
+                      <span className="font-light">{neighborhood.yearBuilt}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-slate-600 font-extralight">Home Styles:</span>
+                      <span className="font-light text-right text-sm">{neighborhood.homeStyles}</span>
+                    </div>
+                    <p className="text-slate-600 text-sm font-extralight mt-3">{neighborhood.description}</p>
                   </div>
-                  <p className="text-slate-600 text-sm">{neighborhood.description}</p>
                 </CardContent>
               </Card>
             ))}
