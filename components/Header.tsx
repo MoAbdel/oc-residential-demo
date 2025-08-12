@@ -83,8 +83,10 @@ export default function Header() {
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-500">
-              Sarah Chen
+            <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
+              <div className="text-2xl md:text-3xl font-bold text-orange-500">
+                Sarah Chen
+              </div>
               <div className="text-sm md:text-base font-normal text-orange-400">
                 Orange County Real Estate
               </div>
