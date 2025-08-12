@@ -1,10 +1,9 @@
 import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import ValueProposition from '@/components/home/ValueProposition';
-import QuickQuote from '@/components/home/QuickQuote';
-import LocalMarketInsights from '@/components/home/LocalMarketInsights';
+import RecentSales from '@/components/home/RecentSales';
 import Testimonials from '@/components/home/Testimonials';
-import NewsletterSignup from '@/components/home/NewsletterSignup';
+import HomeValuationCTA from '@/components/home/HomeValuationCTA';
 import Link from 'next/link';
 import { Phone, Mail } from 'lucide-react';
 
@@ -15,13 +14,11 @@ export default function HomePage() {
       
       <ValueProposition />
       
-      <QuickQuote />
-      
-      <LocalMarketInsights />
+      <RecentSales />
       
       <Testimonials />
       
-      <NewsletterSignup />
+      <HomeValuationCTA />
 
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
