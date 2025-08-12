@@ -78,14 +78,14 @@ export default function Header() {
   const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-transparent backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold text-blue-600">
+            <div className="text-2xl md:text-3xl font-bold text-white">
               Sarah Chen
-              <div className="text-sm md:text-base font-normal text-slate-600">
+              <div className="text-sm md:text-base font-normal text-white/80">
                 Orange County Real Estate
               </div>
             </div>
@@ -117,8 +117,8 @@ export default function Header() {
                       className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                         (item.page === 'Services' && pathname.startsWith('/services')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                          ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
+                          : 'text-white/90 hover:text-orange-400 hover:bg-white/10 backdrop-blur-sm'
                       }`}
                     >
                       {item.title}
@@ -136,7 +136,7 @@ export default function Header() {
                           <Link
                             key={index}
                             href={dropdownItem.url}
-                            className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150"
+                            className="block px-4 py-2 text-sm text-slate-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-150"
                           >
                             {dropdownItem.title}
                           </Link>
@@ -149,8 +149,8 @@ export default function Header() {
                     href={item.url}
                     className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       pathname === item.url
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                        ? 'text-orange-500 bg-orange-50/20 backdrop-blur-sm'
+                        : 'text-white/90 hover:text-orange-400 hover:bg-white/10 backdrop-blur-sm'
                     }`}
                   >
                     {item.title}
@@ -162,11 +162,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:(949) 555-0123" className="text-blue-600 font-medium hover:text-blue-700">
+            <a href="tel:(949) 555-0123" className="text-white font-medium hover:text-orange-400">
               (949) 555-0123
             </a>
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button className="bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Contact Me
               </Button>
             </Link>
@@ -191,7 +191,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-200">
+        <div className="md:hidden bg-white/90 backdrop-blur-sm border-t border-white/20">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigationItems.map((item) => (
               <div key={item.title}>
@@ -202,8 +202,8 @@ export default function Header() {
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
                         (item.page === 'Services' && pathname.startsWith('/services')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                          ? 'text-orange-500 bg-orange-50'
+                          : 'text-slate-700 hover:text-orange-500 hover:bg-orange-50'
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -215,7 +215,7 @@ export default function Header() {
                         <Link
                           key={index}
                           href={dropdownItem.url}
-                          className="block px-3 py-1 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md"
+                          className="block px-3 py-1 text-sm text-slate-600 hover:text-orange-500 hover:bg-orange-50 rounded-md"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {dropdownItem.title}
@@ -228,8 +228,8 @@ export default function Header() {
                     href={item.url}
                     className={`block px-3 py-2 rounded-md text-base font-medium ${
                       pathname === item.url
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                        ? 'text-orange-500 bg-orange-50'
+                        : 'text-slate-700 hover:text-orange-500 hover:bg-orange-50'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -239,11 +239,11 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 border-t border-slate-200 mt-4">
-              <a href="tel:(949) 555-0123" className="block px-3 py-2 text-blue-600 font-medium">
+              <a href="tel:(949) 555-0123" className="block px-3 py-2 text-orange-500 font-medium">
                 (949) 555-0123
               </a>
               <Link href="/contact" className="block px-3 py-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl">
+                <Button className="w-full bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white shadow-lg hover:shadow-xl">
                   Contact Me
                 </Button>
               </Link>
